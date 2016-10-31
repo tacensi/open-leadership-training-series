@@ -2,10 +2,11 @@
   <a href="{{ site.baseurl }}/">
     <img src="{{ site.baseurl }}/img/mozilla-wordmark-white.svg" alt="Mozilla Open Leadership Training Series" class="moz-logo" />
   </a>
-  <!-- <button aria-label="toggle" class="glyphicon glyphicon-menu-hamburger hidden-lg hidden-md"></button> -->
+  <button aria-label="toggle" id="menu-toggle" class="menu-hamburger glyphicon glyphicon-menu-hamburger">
+    <img class="menu-hamburger-svg" src="{{ site.baseurl }}/img/icon-menu.svg" />
+  </button>
 </div>
-
-<ul class="sidebar-menu list-unstyled">
+<ul class="sidebar-menu list-unstyled" id="menu">
   {% assign item = site.pages | where: "path", "contents.html" | first %}
 
 {% for path in item.contents %}

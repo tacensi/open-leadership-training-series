@@ -151,21 +151,37 @@ html.no-js .sidebar .collapsible-content {
   width: 100%;
   max-width: 100px;
 }
-.sidebar-header .glyphicon-menu-hamburger {
+.sidebar-header .menu-hamburger {
   position: absolute;
   right: 1rem;
-  top: 2.5rem;
+  top: 1.3rem;
   color: #fff;
   border: none;
   background: transparent;
   padding: 0;
 }
-.sidebar-header .glyphicon-menu-hamburger:focus {
+.sidebar-header .hamburger:focus {
   color: #e6e6e6;
+}
+img.menu-hamburger-svg {
+  height: 20px;
+  width: auto;
 }
 .sidebar-menu {
   padding-bottom: 0;
   margin-bottom: 0;
+  overflow: hidden;
+  height: 0;
+}
+.sidebar-menu.open {
+  overflow: inherit;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .sidebar-menu {
+    overflow: inherit;
+    height: auto;
+  }
 }
 .sidebar-menu a {
   position: relative;
